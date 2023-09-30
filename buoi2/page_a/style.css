@@ -1,0 +1,37 @@
+.header{
+  
+    display: flex;
+    height: 40px;
+   
+}
+.logo{
+    margin-left: 200px;
+}
+.icon{
+    margin-left: 700px;
+}
+.stayconnected{
+    position: relative;
+    top: -8px;
+    margin-right: 10px;
+    font-size: small;
+    color: #B3B3B3;
+}
+.item1, .item2{
+    display: flex;
+    height: 85px;
+
+}
+.logo_item1, .logo_item2{
+    border-radius: 50%;
+}
+.item{
+    display: flex;
+    height: 100px;
+    margin-left: 285px;
+
+}
+.item2{
+    margin-left: 20px;
+}
+

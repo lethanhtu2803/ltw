@@ -1,0 +1,30 @@
+<script src="code.jquery.com_jquery-3.7.1.min.js"></script>
+
+<style>
+    button{
+        width: 100px;
+        margin-top: 30px;
+        height: 40px;
+    }
+</style>
+<body>
+  <button value="red" style="background-color: red;" onclick="changeColor()">Red</button>
+    <br>
+    <button value="blue" style="background-color: blue;" onclick="changeColor()">Blue</button>
+    <br>
+    <button value="green" style="background-color: green;" onclick="changeColor()">Green</button>
+    <br>
+    <button value="pink" style="background-color: pink;" onclick="changeColor()">Pink</button>
+    <br>
+    <button value="white" style="background-color: white; color: black;" onclick="changeColor()">white</button>
+    <br>
+
+</body>
+<script>
+    $(document).ready(function(){
+        $('button').click(function(){
+            var color = $(this).val();
+            $('body').css('background-color', color);
+        });
+});
+</script>

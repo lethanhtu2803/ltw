@@ -1,0 +1,43 @@
+<script src="code.jquery.com_jquery-3.7.1.min.js"></script>
+
+<style>
+    button{
+        width: 100px;
+        margin-top: 30px;
+        height: 40px;
+    }
+</style>
+<body>
+    a: 
+    <textarea name="" id="textarea" cols="30" rows="10"></textarea>
+    <br>
+    <br>
+    b: 
+    <input type="text" id="text">
+    <br>
+    <br>
+    <button onclick="count()">Count</button>
+    <br>
+    <br>
+    so lan b xuat hien trong a la : <span id="value"></span>
+</body>
+<script>
+    // moi nguoi oi moi nguoi, hom nay moi nguoi co thay vui khong nao
+    // moi nguoi
+    // output : 3
+   function count(){
+    let textarea = document.getElementById("textarea").value.trim();
+    let text = document.getElementById("text").value.trim();
+    let index = textarea.indexOf(text);
+    let value = document.getElementById("value");
+    let count = 0;
+    while(textarea.includes(text)){
+        count++;
+       
+        textarea = textarea.slice(index + text.length);
+        index = textarea.indexOf(text);
+    }
+    value.innerHTML = count;
+   
+   }
+</script>

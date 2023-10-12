@@ -1,0 +1,22 @@
+<script src="code.jquery.com_jquery-3.7.1.min.js"></script>
+
+<style>
+  button {
+    width: 100px;
+    margin-top: 30px;
+    height: 40px;
+  }
+</style>
+<body style="text-align: center;">
+  <img  src="1.png" height="300" width="300" alt="" />
+</body>
+<script>
+  $(function () {
+    var value = 0;
+    var myFnc = function () {
+        value = value + 15;
+      $("img").css("transform", "rotate(" + value + "deg)");
+    };
+    setInterval(myFnc, 1000);
+  });
+</script>

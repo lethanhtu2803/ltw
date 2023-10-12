@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Tahoma, Arial, SansSerif;
+}
+
+#form {
+  margin-top: 240px;
+  width: 600px;
+  border: 8px solid #e6e6e6;
+  margin-left: 600px;
+}
+.wrapper {
+    width: 598px;
+    border-radius: 10px;
+}
+
+.form_content {
+  width: 95%;
+}
+
+form {
+  width: 90%;
+  margin: auto;
+}
+
+.form-group {
+  margin: auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 16px;
+  font-weight: bold;
+  font-size: 8px;
+  position: relative;
+  right: -11px;
+  top: 33px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+  width: 100%;
+  padding: 18px 10px 10px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 25px;
+  background-color: #f7f7f7;
+}
+::placeholder {
+  color: #dbd5d2;
+}
+input[type="number"]::placeholder {
+  color: #000;
+  font-weight: bold;
+}
+.row {
+  width: 100%;
+  display: flex;
+}
+
+.col1,
+.col2 {
+  width: 45%;
+}
+.text-area-wrapper {
+  position: relative;
+  margin-top: 12px;
+}
+
+.text-area-wrapper textarea {
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+
+.text-area-wrapper .placeholder {
+  position: absolute;
+  top: 30px;
+  left: 10px;
+  pointer-events: none;
+  color: #dbd5d2;
+}
+.text-area-wrapper textarea:focus ~ .placeholder {
+  display: none;
+}
+
+.text-area-wrapper textarea:focus ~ .label_area {
+    display: none;
+}
+.text-area-wrapper .label_area {
+    font-weight: bold;
+    font-size: 9px;
+    position: relative;
+    right: -11px;
+    top: -148px;
+  }
+
+button[type="submit"] {
+  display: block;
+  width: 104%;
+  padding: 10px;
+  background-color: #333333;
+  color: #fff;
+  border: none;
+  margin: 12px 0 28px 0;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}

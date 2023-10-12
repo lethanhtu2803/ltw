@@ -1,0 +1,52 @@
+<script src="code.jquery.com_jquery-3.7.1.min.js"></script>
+
+<style>
+  button {
+    width: 100px;
+    margin-top: 30px;
+    height: 40px;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+</style>
+<body style="text-align: center"></body>
+<script>
+  $(document).ready(function () {
+    var numbers = [];
+    for (var i = 0; i < 64; i++) {
+      $("body")
+        .add('<button  value="' + (i + 1) + '">' + (i + 1) + "</button>")
+        .appendTo("body");
+    }
+    $("button").click(function () {
+      var number = Number($(this).val());
+      numbers.push(number);
+      console.log(number);
+      console.log(numbers);
+      $(this).css("background-color", "white");
+      $(this).css("color", "white");
+      $(this).css("border", "none");
+      $(this).attr("disabled", "");
+      if (numbers[0] != 1) {
+        alert("Wrongg!");
+        location.reload();
+      }
+      for (var i = 0; i < numbers.length; i++) {
+        if (numbers[i] < numbers[i + 1]) {
+          if (numbers[i] == numbers[i + 1] - 1) {
+            console.log("correct!");
+            console.log(numbers[i]);
+            console.log(numbers[i + 1] - 1);
+            $(this).css("background-color", "white");
+            $(this).css("color", "white");
+            $(this).css("border", "none");
+            $(this).attr("disabled", "");
+          } else {
+            alert("Wrongg!");
+            location.reload();
+          }
+        }
+      }
+    });
+  });
+</script>

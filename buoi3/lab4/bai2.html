@@ -1,0 +1,27 @@
+<script src="code.jquery.com_jquery-3.7.1.min.js"></script>
+<script src="bai2.js"></script>
+<style>
+    button{
+        width: 100px;
+        margin-top: 30px;
+        height: 40px;
+    }
+</style>
+<body>
+ 
+    <button onclick="ptbac2()">phuong trinh bac 2</button>
+    <br>
+    <span style="color: red; font-weight: bold;" id="nghiem"></span>
+    <br>
+     <span id="nghiem1"></span>
+    <br>   
+    <span id="nghiem2"></span>
+</body>
+<script>
+    $(document).ready(function(){
+        $('button').click(function(){
+            var color = $(this).val();
+            $('body').css('background-color', color);
+        });
+});
+</script>

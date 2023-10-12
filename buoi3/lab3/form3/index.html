@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    
+</head>
+
+<body>
+    <div id="container">
+        <form action="">
+            <h4>Account</h4>
+            <div class="form_group">
+                <div class="input_container">
+                    <i class="fa fa-user"></i>
+                    <input type="text" id="username" placeholder="Full Name">
+                </div>
+            </div>
+            <div class="form_group">
+                <div class="input_container">
+                    <i class="fa fa-envelope"></i>
+                    <input type="email" id="email" placeholder="Email Address">
+                </div>
+            </div>
+            <div class="form_group">
+                <div class="input_container">
+                    <i class="fa fa-key"></i>
+                    <input type="password" id="password" placeholder="Password">
+                </div>
+            </div>
+            <div class="form_group" style="display: flex;">
+                <h4 style="margin-right: 115px;margin-top: -10px;margin-bottom: 0;">Date of Birth</h4>
+                <h4 style="margin-top: -10px;margin-bottom: 0;">Gender</h4>
+            </div>
+            <div class="form_group">
+                <div class="date">
+                    <input type="text" id="day" placeholder="DD">
+                    <input type="text" id="month" placeholder="MM">
+                    <input type="text" id="year" placeholder="YYYY">
+                </div>
+                <div class="gender">
+                    <button id="male">Male</button>
+                    <button id="female">Female</button>
+                </div>
+            </div>
+            <h4 style="margin-top: 0;padding-top: 18px;">Payment Details</h4>
+            <div class="form_group">
+                <button id="credit_card" onclick="buttonClick()"><i class="fa-brands fa-cc-visa"
+                        style="margin-right: 6px;"></i>Credit Card</button>
+                <button id="paypal" onclick="buttonClick1()"><i class="fa-brands fa-cc-paypal"
+                        style="margin-right: 6px;"></i>Paypal</button>
+            </div>
+            <div class="form_group">
+                <div class="input_container">
+                    <i class="fa fa-credit-card"></i>
+                    <input type="text" id="card" placeholder="Card Number">
+                </div>
+            </div>
+            <div class="form_group">
+                <div class="date">
+                    <div class="input_container">
+                        <i class="fa fa-credit-card"></i>
+                        <input type="text" id="card" placeholder="Card CVC">
+                    </div>
+                </div>
+                <div class="gender" style="margin-left: 12px;">
+                    <input type="text" id="datepicker" placeholder="1 Jane"><i class="fa-solid fa-caret-up fa-rotate-180" style="position: relative;top: -20px;left: -20px;"></i>
+                    <input type="text" class="yearpicker" value="" placeholder="2015"/><i class="fa-solid fa-caret-up fa-rotate-180" style="position: relative;top: -20px;left: -20px;"></i>
+                </div>
+            </div>
+            <h4 style="margin-top: 0px;padding-top: 18px;margin-bottom: 12px;">Term and Conditions</h4>
+            <div class="form_group">
+                <input type="checkbox" id="terms" name="terms" value="terms">
+                <label for="terms" style="color: #c2bdbd;"> I accept the terms and conditionals for signing up to this service, and hereby confirm I have read the privacy policy</label><br>
+            </div>
+        </form>
+    </div>
+    <!-- <script>
+        function buttonClick() {
+          var credit = document.getElementById("credit_card");
+          if (credit.classList.toggle('active')) {
+            credit.style.backgroundColor = "#7ED321";
+            credit.style.color = 'white';
+          }
+        }
+    
+        function buttonClick1() {
+          var paypal = document.getElementById("paypal");
+          var credit = document.getElementById("credit_card");
+          if (paypal.classList.toggle('active')) {
+            paypal.style.backgroundColor = "#7ED321";
+            paypal.style.color = 'white';
+            credit.style.backgroundColor = "#F9F9F9";
+            credit.style.color = "#c2bdbd";
+          }
+        }
+    
+        $(function () {
+          $("#datepicker").datepicker({
+            dateFormat: "dd MM",
+            changeMonth: true,
+            changeYear: false
+            
+          });
+        });
+
+        
+      </script>
+      <script type="text/javascript">
+        $(function() {
+            $('.yearpicker').datepicker({
+                changeYear: true,
+                showButtonPanel: true,
+                dateFormat: 'yy',
+                onClose: function(dateText, inst) { 
+                    var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
+                    $(this).datepicker('setDate', new Date(year, 1));
+                }
+            });
+        $(".date-picker-year").focus(function () {
+                $(".ui-datepicker-month").hide();
+            });
+        });
+
+</script> -->
+<script src="app.js"></script>
+</body>
+
+</html>

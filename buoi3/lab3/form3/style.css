@@ -13,7 +13,7 @@ body {
 form {
   margin: auto;
   width: 450px;
-  height: 710px;
+  height: 810px;
   border-radius: 12px;
 }
 .form_group {
@@ -142,4 +142,23 @@ h4 {
 input[type="checkbox"] {
     margin-bottom: 20px;
     margin-right: 12px;
+}
+
+span {
+  color: red;
+  font-weight: bold;
+}
+
+#submitForm{
+  margin-top: 0px;
+  margin-left: 135px;
+  width: 40%;
+  background-color: #c2bdbd;
+  border: none;
+  color: #fff;
+  padding: 12px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
 }

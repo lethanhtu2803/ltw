@@ -10,14 +10,17 @@
 </head>
 
 <body>
-    <form>
+    <form onsubmit="return false">
         <h3>Login Here</h3>
 
         <input type="text" placeholder="username or email" id="username">
-
+        <span id="empty_name"></span> <br>
+        <span id="error_name"></span>
         <input type="password" placeholder="password" id="password">
+        <span id="empty_pass"></span> <br>
+        <span id="error_pass"></span> <br>
 
-       <button>Sign in</button><br>
+       <button type="submit" id="submitForm">Sign in</button><br>
         <span>Or login with</span>
         <div class="social">
             <div class="fb"><img src="assets/facebook.png" alt="" srcset="" width="30px" height="30px"></div>
@@ -25,6 +28,8 @@
         </div>
         <a href="#" class="signup">Sign up</a>
     </form>
+
+    <script src="app.js"></script>
 </body>
 
 </html>

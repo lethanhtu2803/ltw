@@ -15,20 +15,26 @@
             <div class="wrapper">
                 <div class="form_content">
                     <h2 style="display: flex;justify-content: center;margin-bottom: 5px;">Contact Us</h2>
-                    <form action="" method="post">
+                    <form>
                         <div class="form-group">
                             <label for="username">FULL NAME*</label>
                             <input type="text" id="username" name="username" placeholder="Enter Your Name" required>
+                            <span id="emptyName"></span> <br>
+                            <span id="errorName"></span>
                         </div>
                         <div class="form-group">
                             <div class="row">
                                 <div class="col1" style="margin-right: 50px;">
                                     <label for="email">EMAIL*</label>
                                     <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+                                    <span id="emptyEmail"></span> <br>
+                                    <span id="errorEmail"></span>
                                 </div>
                                 <div class="col2">
                                     <label for="phone">Phone*</label>
                                     <input type="text" id="phone" name="phone" placeholder="Enter Number Phone" required>
+                                    <span id="emptyPhone"></span> <br>
+                                    <span id="errorPhone"></span>
                                 </div>
                             </div>
                         </div>
@@ -44,27 +50,13 @@
                                 <div class="placeholder">Your message here</div>
                             </div>
                         </div>
-                        <button type="submit">Submit <i class="fa-solid fa-arrow-right" style="color: #ffffff;margin-left: 4px;"></i></button>
+                        <button type="submit" id="submitForm">Submit <i class="fa-solid fa-arrow-right" style="color: #ffffff;margin-left: 4px;" ></i></button>
                     </form>
                 </div>
             </div>
         </div>
    
-    <script>
-        function handleTextareaInput() {
-            const label_textarea = document.querySelector(".label_textarea");
-            const textarea = document.getElementById('message');
-            const placeholder = document.querySelector('.placeholder');
-
-            if (textarea.value !== '') {
-                placeholder.style.display = 'none';
-                label_textarea.style.display = 'none';
-                textarea.style.marginTop = '24px';
-            } else {
-                placeholder.style.display = 'block';
-            }
-        }
-    </script>
+   <script src="app.js"></script>
 </body>
 
 </html>

@@ -14,7 +14,10 @@ body {
     width: 598px;
     border-radius: 10px;
 }
-
+span {
+  color: red;
+  font-weight: bold;
+}
 .form_content {
   width: 95%;
 }
@@ -43,6 +46,7 @@ input[type="email"],
 input[type="number"] {
   width: 100%;
   padding: 18px 10px 10px 10px;
+  margin-bottom: 4px;
   border: 1px solid #ccc;
   border-radius: 4px;
   height: 25px;

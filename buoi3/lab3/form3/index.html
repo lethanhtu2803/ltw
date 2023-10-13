@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FORM THREE</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
@@ -15,7 +15,7 @@
 
 <body>
     <div id="container">
-        <form action="">
+        <form onsubmit="return false" id="form">
             <h4>Account</h4>
             <div class="form_group">
                 <div class="input_container">
@@ -23,18 +23,21 @@
                     <input type="text" id="username" placeholder="Full Name">
                 </div>
             </div>
+            <span id="errorName"></span>
             <div class="form_group">
                 <div class="input_container">
                     <i class="fa fa-envelope"></i>
                     <input type="email" id="email" placeholder="Email Address">
                 </div>
             </div>
+            <span id="errorEmail"></span>
             <div class="form_group">
                 <div class="input_container">
                     <i class="fa fa-key"></i>
                     <input type="password" id="password" placeholder="Password">
                 </div>
             </div>
+            <span id="errorPassword"></span>
             <div class="form_group" style="display: flex;">
                 <h4 style="margin-right: 115px;margin-top: -10px;margin-bottom: 0;">Date of Birth</h4>
                 <h4 style="margin-top: -10px;margin-bottom: 0;">Gender</h4>
@@ -46,10 +49,12 @@
                     <input type="text" id="year" placeholder="YYYY">
                 </div>
                 <div class="gender">
-                    <button id="male">Male</button>
-                    <button id="female">Female</button>
+                    <button id="male" onclick="buttonClickMale()">Male</button>
+                    <button id="female" onclick="buttonClickFemale()">Female</button>
                 </div>
             </div>
+            <span id="errorOption"></span> <br>
+            <span id="errorGender"></span>
             <h4 style="margin-top: 0;padding-top: 18px;">Payment Details</h4>
             <div class="form_group">
                 <button id="credit_card" onclick="buttonClick()"><i class="fa-brands fa-cc-visa"
@@ -60,14 +65,15 @@
             <div class="form_group">
                 <div class="input_container">
                     <i class="fa fa-credit-card"></i>
-                    <input type="text" id="card" placeholder="Card Number">
+                    <input type="text" id="card_number" placeholder="Card Number">
                 </div>
             </div>
+            <span id="errorCard"></span>
             <div class="form_group">
                 <div class="date">
                     <div class="input_container">
                         <i class="fa fa-credit-card"></i>
-                        <input type="text" id="card" placeholder="Card CVC">
+                        <input type="text" id="card_cvc" placeholder="Card CVC">
                     </div>
                 </div>
                 <div class="gender" style="margin-left: 12px;">
@@ -75,11 +81,13 @@
                     <input type="text" class="yearpicker" value="" placeholder="2015"/><i class="fa-solid fa-caret-up fa-rotate-180" style="position: relative;top: -20px;left: -20px;"></i>
                 </div>
             </div>
+            <span id="errorCard_cvc"></span>
             <h4 style="margin-top: 0px;padding-top: 18px;margin-bottom: 12px;">Term and Conditions</h4>
             <div class="form_group">
-                <input type="checkbox" id="terms" name="terms" value="terms">
+                <input type="checkbox" id="terms" name="terms" value="terms" onclick="checkBox()">
                 <label for="terms" style="color: #c2bdbd;"> I accept the terms and conditionals for signing up to this service, and hereby confirm I have read the privacy policy</label><br>
             </div>
+            <button type="submit" id="submitForm" style="display: none;">Sign in</button><br>
         </form>
     </div>
     <!-- <script>
